@@ -68,17 +68,20 @@ namespace OasisDiscord
 
         private string GetIp(Steamworks.CSteamID cSteamID)
         {
-            SteamGameServerNetworking.GetP2PSessionState(cSteamID, out P2PSessionState_t state);
-            string adress = Parser.getIPFromUInt32(state.m_nRemoteIP);
-
-            return adress;
+            var ip = SteamGameServerNetworking.GetP2PSessionState(cSteamID, out var p2p)? Parser.getIPFromUInt32(p2p.m_nRemoteIP): "???";
+            return ip;
         }
 
         private RootObject GetInfo(string Ip)
         {
             string response = new WebClient().DownloadString("http://ip-api.com/json/" + Ip);
 
-            var rootObject = JsonConvert.DeserializeObject<RootObject>(response);
+            RootObject rootObject = JsonConvert.DeserializeObject<RootObject>(response);
+
+            if (Ip == "???")
+            {
+                rootObject.country = "???";
+            }
 
             return rootObject;
         }
