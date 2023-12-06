@@ -15,7 +15,7 @@ namespace OasisDiscord
 {
     public class OasisPlugin : RocketPlugin<OasisConfiguration>
     {
-        public static string version = "1.0.0.3";
+        public static string version = "1.0.0.4";
         public static OasisPlugin Instance;
 
         public override TranslationList DefaultTranslations
@@ -24,11 +24,11 @@ namespace OasisDiscord
             {
                 return new TranslationList
                 {
-                    { "report_permission", "[Oasis] Nemáš oprávnění na tento příkaz." },
-                    { "report_cooldown", "[Oasis] Report můžeš odeslat každých {1} sekund. Zbývá ti {0} sekund." },
-                    { "report_failed", "[Oasis] Něco se pokazilo při posílaní reportu, zkus to znovu." },
-                    { "report_sent", "[Oasis] Report byl odeslán admin teamu!" },
-                    { "report_help", "[Oasis] Špatné použití příkazu, příkaz vypadá takto /report (zpráva)!" },
+                    { "report_permission": "[Oasis] You do not have permission for this command." },
+                    { "report_cooldown": "[Oasis] You can send a report every {1} seconds. You have {0} seconds remaining." },
+                    { "report_failed": "[Oasis] Something went wrong while sending the report, please try again." },
+                    { "report_sent": "[Oasis] The report has been sent to the admin team!" },
+                    { "report_help": "[Oasis] Incorrect command usage, the command should look like this /report (message)!" }
                 };
             }
         }
