@@ -24,11 +24,11 @@ namespace OasisDiscord
             {
                 return new TranslationList
                 {
-                    { "report_permission": "[Oasis] You do not have permission for this command." },
-                    { "report_cooldown": "[Oasis] You can send a report every {1} seconds. You have {0} seconds remaining." },
-                    { "report_failed": "[Oasis] Something went wrong while sending the report, please try again." },
-                    { "report_sent": "[Oasis] The report has been sent to the admin team!" },
-                    { "report_help": "[Oasis] Incorrect command usage, the command should look like this /report (message)!" }
+                    { "report_permission", "[Oasis] You do not have permission for this command." },
+                    { "report_cooldown", "[Oasis] You can send a report every {1} seconds. You have {0} seconds remaining." },
+                    { "report_failed", "[Oasis] Something went wrong while sending the report, please try again." },
+                    { "report_sent", "[Oasis] The report has been sent to the admin team!" },
+                    { "report_help", "[Oasis] Incorrect command usage, the command should look like this /report (message)!" }
                 };
             }
         }
